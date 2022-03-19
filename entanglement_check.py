@@ -51,8 +51,7 @@ for qubit, percentage in counts.items():
     percentage *= 0.1
     print(f"Qubit : {qubit}  =>  Percentage : {round(percentage, 3)}%")
 
-
-print("Maximum entanglement" if counts.get("01") == counts.get("10") else "Non-maximal entanglement")
+print(("Non-maximal entanglement", "Maximum entanglement")[counts.get("01") == counts.get("10")])
 
 
 ##############################################################
@@ -76,5 +75,4 @@ for qubit, percentage in counts_exp.items():
     percentage *= 0.1
     print(f"Qubit : {qubit}  =>  Percentage : {round(percentage, 3)}%")
 
-
-print("Maximum entanglement" if counts_exp.get("01") == counts_exp.get("10") else "Non-maximal entanglement")
+print(("Non-maximal entanglement", "Maximum entanglement")[counts_exp.get("01") == counts_exp.get("10")])
