@@ -14,7 +14,6 @@ from qiskit import (
     execute,
     Aer,
 )
-import numpy as np
 
 from qiskit.visualization import plot_histogram
 
@@ -42,7 +41,7 @@ print(circuit)
 
 simulator = Aer.get_backend("qasm_simulator")  # Setting up the simulator
 job = execute(circuit, simulator, shots=1000)  # Runs on 1000 trials
-result = job.result()  # Get the result
+result = job.result()                # Get the result
 counts = result.get_counts(circuit)  # Get the result
 
 print("\nResults :", counts)
